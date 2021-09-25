@@ -1,0 +1,18 @@
+<style>
+.glyphicon-plus {
+	color: white;
+	font-size: 50px;
+}
+</style>
+
+<div class="app__videos">
+  <% @posts.each do |post| %>
+    <div class="video">
+      <video autoplay muted loop class="video__player" src="<%= url_for(post.video) %>"></video>
+    </div>
+  <% end %>
+</div>
+
+<a href="/posts/new" style="position: absolute; bottom: 10px" id="start">
+  <span class="glyphicon glyphicon-plus"></span>
+</button>

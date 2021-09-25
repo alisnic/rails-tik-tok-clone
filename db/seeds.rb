@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+post = Post.new
+post.video.attach(io: File.open('/Users/alisnic/Desktop/video1.mp4'), filename: 'video.mp4')
+post.save!
+
+
+post = Post.new
+post.video.attach(io: File.open('/Users/alisnic/Desktop/video2.mp4'), filename: 'video.mp4')
+post.save!
